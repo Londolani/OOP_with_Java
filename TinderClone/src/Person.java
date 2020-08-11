@@ -1,12 +1,16 @@
 
 
 public class Person{
+  /**I can create create instance variables and able to use another class type variable in another class
+  use getters to get access to variables of a class
+  */
    private String name;
    private int age;
    private String gender;
    private String location;
    private String bio;
    
+  //I am able to craete constructors and understand what a consrutor does
   Person(String name, int age, String gender, String location, String bio){
       this.name = name;
       this.age = age;
@@ -15,7 +19,7 @@ public class Person{
       this.location =  location;
   }
    
-     // Getter
+     // I know how to craete getters and setters
   public String getName() {
     return this.name;
   }
@@ -32,4 +36,10 @@ public class Person{
   public void setLocation(String newLocation){this.location = newLocation;}
   public void setBio(String newBio){this.bio = newBio;}
   public void setGender(String newGender){this.gender = newGender;}
+}
+
+//@Overide
+public String toString(){
+  
+    return "name " + this.name + " location " + this.location;
 }

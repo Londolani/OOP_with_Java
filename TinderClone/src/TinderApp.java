@@ -13,6 +13,8 @@ public class TinderApp{
       
       System.out.println("Awesome, you have selected a preference of: "+ preference);
         
+
+      //I know how to call a created class object
       TinderSwipe ts = new TinderSwipe();  
       
       //System.out.println(ts.getProfilesByPreference(preference));
@@ -24,7 +26,7 @@ public class TinderApp{
       
       //String userInput = keyboard.nextLine();
        
-       String userInput;
+      String userInput;
            
       while(iterator.hasNext()){
          Profile nextProfile = iterator.next();

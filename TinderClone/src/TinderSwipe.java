@@ -20,7 +20,7 @@ public class TinderSwipe{
         }
         else {
             returnList = db.getAllProfiles();
-        }
+        }       
 
         return returnList;
     }

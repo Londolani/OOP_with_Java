@@ -5,7 +5,6 @@ BINDIR = bin
 DOCDIR = doc
 TESTDIR = test
 
-#modified file JUNIT variable for compiling but not using JUNIT
 JUNIT = ../junit/junit-4.12.jar -sourcepath ./src ./src/$*.java
 
 JAVAC = javac
@@ -19,20 +18,29 @@ vpath %.class $(BINDIR)
 .java.class:
 	$(JAVAC) $(JFLAGS) $<
 
-classes: Person.class Image.class Profile.class Database.class TinderApp.class
+classes: Person.class Car.class Driver.class Database.class UberApp.class Passenger.java Ride.java UberRide.java Vehicle.java
 
 default: $(CLASSES)
 	
 Person.class: Person.java 
 	javac -d $(BINDIR) -cp $(JUNIT)
-Image.class: Image.java 
+Car.class: Car.java 
 	javac -d $(BINDIR) -cp $(JUNIT)
-Profile.class: Profile.java 
+Driver.class: Driver.java 
 	javac -d $(BINDIR) -cp $(JUNIT)
 Database.class: Database.java 
 	javac -d $(BINDIR) -cp $(JUNIT)
-TinderApp.class: TinderApp.java 
+UberApp.class: UberApp.java 
 	javac -d $(BINDIR) -cp $(JUNIT)
+UberRide.class: UberRide.java 
+	javac -d $(BINDIR) -cp $(JUNIT)
+Ride.class: Ride.java 
+	javac -d $(BINDIR) -cp $(JUNIT)		
+Passenger.class: Passenger.java 
+	javac -d $(BINDIR) -cp $(JUNIT)	
+Vehicle.class: Vehicle.java 
+	javac -d $(BINDIR) -cp $(JUNIT)
+
 
 clean:
 	rm -f  $(BINDIR)/*.class

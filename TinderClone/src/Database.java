@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class Database{
    
+
    ArrayList<Profile> allProfiles = new ArrayList<Profile>() ;
    ArrayList<Profile> maleProfiles = new ArrayList<Profile>() ;
    ArrayList<Profile> femaleProfiles = new ArrayList<Profile>() ;
+
+   /**maleProfiles.add(profile,0);
+    *adding to an arrayList a make profile at the first position 
+    */
    FileWriter csvWriter;
     Database() {
         try {
@@ -108,3 +113,19 @@ public class Database{
    public ArrayList<Profile> getFemaleProfiles(){return this.allProfiles;}
    
 }
+
+
+
+
+
+ public void readFromCSV(String file){
+        Scanner file = new Scanner(file("profile.csv"))
+        String split = ","
+        String[] data;
+        int z = 0;
+        while(file.hasNextLine()){
+            data=data[i++]
+        }
+        data[0] = profile1;
+
+ }
